@@ -1,0 +1,30 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM1ekNDQWMrZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJeE1URXhOREV5TkRZek1Gb1hEVE14TVRFeE1qRXlORFl6TUZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTllMClpUWmE1VVFobEtrZmlxY2p6dFpJTXMxNlhOZW0vQ1p6YU9UNWpxUHowbGJobW5vejA0eFA1aDBBaDlPZHQ1bm8KR0lMVlVndVluM2ttM2k0Q0VZNU93cWhpZGh1eU8xR0pJUkN4Szg3SHg3ZXIrQlNzY3FxNFo1WGovSlMyb3dvSApuUkFTOG5iaDIra3cvNmxYMXhkcUNGdFZTaFYwaWlPZ0hHRWdBczBRMUNYZUF0UVdocEJHRFNZcmlPbTFCOGNpCmEwOStLWE10bE84Q2ZhYTduV0MrQmdMaEJkM3lhaWtBVSs1OHh5d3RnK1ZxSUVpc2dqcThCNXQyYnduUEdGTEEKYW4zQzNtdWoyWUhOa2xmZ1ZBR0hsUENqZnU4K3ovUDZ6bUM3NCtNR2VINCtuejNoZjQ3Q0poTVF5YmhNMFFyaQp6MEN1cFlYQzBTbVBBZmVzRGUwQ0F3RUFBYU5DTUVBd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZDcnBkWWtqcC9HVGk3a0lmZVhMdGJlM29jTm1NQTBHQ1NxR1NJYjMKRFFFQkN3VUFBNElCQVFDQjFzSjlvOEdWSCtIQ2tweHpHejJSZzhGckhEdGJMQUhDemw0WDN0RXFvS3JFd2hWQgozQnB0WmxmSlFQc2lqZXpxYUNsTklVek1nM09rY1g1Z3JFNGtMOW9mMy9nVDJ2NlN0eXR6UUdEc0VXTHVZUVRoClo1WVdwL2d1c0lzZlNoempMOHNHaHFYaURrTGlQZjVjUFJlQ211QmdScTJYOHVJZ3ZpY3ZWOUlRTnVpSzZ0c1oKY01rT1dJZ0FRdG1ZV1dpazJVZFBDb2g2bW1aNDgzZkFpM1dDcTJMQitNWktBQWx6NkVWaHE1bXVEWmNlYnNVSwo1WW0yTlFDRFBUTXMrdFRFQUN3bENLNWFLZjlPOGcvQ1VHdG1sY2hoaHFRcm5vUWVCK0tNMGhDZ1ZEeDhsRVZhCjduWlZmZEx2ZThnQjJhN1lsWFFJWlR0aTFjOS80RDllWlFkUwotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    server: https://FE3792493046ECC9D10B6B154748A394.yl4.eu-west-1.eks.amazonaws.com
+  name: arn:aws:eks:eu-west-1:184739344849:cluster/omt-ng-dev-eks
+contexts:
+- context:
+    cluster: arn:aws:eks:eu-west-1:184739344849:cluster/omt-ng-dev-eks
+    user: arn:aws:eks:eu-west-1:184739344849:cluster/omt-ng-dev-eks
+  name: arn:aws:eks:eu-west-1:184739344849:cluster/omt-ng-dev-eks
+current-context: arn:aws:eks:eu-west-1:184739344849:cluster/omt-ng-dev-eks
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:eu-west-1:184739344849:cluster/omt-ng-dev-eks
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      args:
+      - --region
+      - eu-west-1
+      - eks
+      - get-token
+      - --cluster-name
+      - omt-ng-dev-eks
+      command: aws
+env:
+- name: AWS_PROFILE
+  value: omt
